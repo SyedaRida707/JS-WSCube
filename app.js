@@ -84,7 +84,7 @@
 // console.log(age, typeof age);
 
 // Boolean
-// let check = true;   // true = 1, false = 0 
+// let check = true;   // true = 1, false = 0
 // console.log(check, typeof check);
 
 // Null
@@ -153,8 +153,8 @@
 // let $age = 21;
 // let isStudent = true;
 // console.log(`
-//        Name = ${$name} 
-//        Age = ${$age} 
+//        Name = ${$name}
+//        Age = ${$age}
 //        isStudent = ${isStudent}
 //         `);
 
@@ -195,33 +195,163 @@
 
 // Practice Question 5
 // console.log(`
-    
+
 //         hello
-//         i'm 
+//         i'm
 //         multi line of code
 
 
 //     `);
 
 // Arithematic Operators
-let a = 10;
-let b = 5;
-console.log(a+b);
-console.log(a-b);
-console.log(a*b);
-console.log(a/b);
-console.log(a%b);
-// post increment
-a++
-console.log(a);
-b--
-console.log(b);
-// pree increment
-++a
-console.log(a);
---b
-console.log(b);
-console.log(a**b);
+// let a = 10;
+// let b = 5;
+// console.log(a + b);
+// console.log(a - b);
+// console.log(a * b);
+// console.log(a / b);
+// console.log(a % b);
+// // post increment
+// a++
+// console.log(a);
+// b--
+// console.log(b);
+// // pre increment
+// ++a
+// console.log(a);
+// --b
+// console.log(b);
+// console.log(a ** b);
+
+// Assignment Operators
+// let a = 10;
+// let b = 5;
+// console.log(a+=2); // a = a + 2
+// console.log(a-=2);
+// console.log(a*=2);
+// console.log(a/=b);
+// console.log(a%=2);
+
+// interview question
+//swap
+// let a = 10;
+// let b = 5;
+// let c = a;
+// a = b;
+// b = c;
+// console.log(a,b);
+
+// a = a+b;  // 15
+// b = a-b   // 5
+// a = a-b   // 10
+// a-=b
+// console.log(a,b);
+
+// Comparison Operators
+// let a = 10;
+// let b = 10;
+// console.log(a == b);
+// console.log(a == '10');  // not check type
+// console.log(a === b);
+// console.log(a === '10'); // check type
+// console.log(a != 5);
+// console.log(a != '10');  // not check type
+// console.log(a !== 5);
+// console.log(a !== '10');  // check type
+// console.log(7>6);
+// console.log(5<6);
+// console.log(8>=6);
+// console.log(4<=6);
+
+// interview question
+// true+5 1+5=6
+// console.log((60>50)+5);
+// let a = 10;
+// let b = 20;
+// let c = 5;
+// console.log(a<b<c); // 10<20 = true = 1<5 true
+
+// Logical Operator's
+// let a = 10;
+// let b = 5;
+// console.log(a > b && b < a);   //both true
+// console.log(a > 20 || b < a);   // atleast one true
+// console.log(!(20 !== 20));     // reverse if true = false
+
+// String Operators
+// let str1 = 'Rida';
+// let str2 = ' Abid';
+// str2 += '!'
+// console.log(str1 + str2);
+// console.log(10+ ' world');
+
+
+// Ternary Operator
+// let age = +prompt('Enter your age....?😊');
+// let result = (age >= 18) ? "Eligible For Code" : "Not Eligible";
+// console.log(result);
+
+// task
+// let num1 = +prompt('enter first number....');
+// let num2 = +prompt('enter second number....');
+// let outPut = num1 > num2 ? `Num1 ${num1} is greater than NUm2 ${num2}` : `Num2 ${num2} is greater than NUm1 ${num1}`;
+// console.log(outPut);
+
+
+// Conditional Statement
+// if statement
+// if (true) {
+//     console.log('hello world'); 
+// }
+//task
+// let score = 60;
+// if (score > 50) {
+//     console.log('you passed!');   
+// }
+// if..else statement
+// let score = 50;
+// if (score >= 50) {
+//     console.log('you passed!');
+// } else {
+//     console.log('you fail!');
+// }
+
+//task
+// let num1 = +prompt('enter any num you want to see even or odd');
+// if (num1 % 2 === 0) {
+//     console.log(num1, 'that is even num');
+// } else {
+//     console.log(num1, 'that is odd num');
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
