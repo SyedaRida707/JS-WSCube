@@ -585,7 +585,7 @@
 // }
 
 // for...of loop
-//  for..of iteration karta hai string pr or arry pr split krke value deta
+//  for..of iteration karta hai string pr or array pr split krke value deta
 // let s = 'rida abid';
 // for(let i of s){
 //     console.log(i);
@@ -683,19 +683,19 @@
 // }
 // task 2
 // for(n = 20; n >= 1; n--){
-//     console.log(n);  
+//     console.log(n);
 // }
 
 // task 3
 // let user = +prompt('enter any number to check prime num');
-// let midValue = parseInt(user / 2);  
+// let midValue = parseInt(user / 2);
 // console.log(midValue);
 
 // let isPrime = true;
 
 // for (let n = 2; n <= midValue; n++) {
 //     if (n % 2 == 0) {
-//         console.log(user, n);  
+//         console.log(user, n);
 //         isPrime = false;
 //         break;
 //     }
@@ -727,7 +727,7 @@
 
 // task 4
 // let user = +prompt('enter any num to check a num is perfect');
-// let midValue = parseInt(user / 2);
+// let midValue = parseInt(user / 2);   //6=>3
 
 // let sum = 0;
 // for (let i = 1; i <= midValue; i++) {
@@ -742,8 +742,365 @@
 //     console.log('not perfect  number', sum, user);
 // }
 
-// interview question => reverse a number 
-// '1234' => '4321'
+// task 4
+// interview question => reverse a number
+// '12345' => '54321'
+
+// let num = 12345;
+// let reverse = 0;
+
+// while (num > 0) {
+//     let lastDigit = num % 10;
+//     reverse = reverse * 10 + lastDigit;
+//     num = parseInt(num / 10);
+// }
+// console.log(reverse);
+
+//Round 1
+// lastDigit = 12345 % 10 = 5
+// reverse = 0 * 10 + 5 = 5
+// num = 12345 / 10 = 1234
+
+//Round 2
+// lastDigit = 1234 % 10 = 4
+// reverse = 5 * 10 + 4 = 54
+// num = 1234 / 10 = 123
+
+//Round 3
+// lastDigit = 123 % 10 = 3
+// reverse = 54 * 10 + 3 = 543
+// num = 123 / 10 = 12
+
+//Round 4
+// lastDigit = 12 % 10 = 2
+// reverse = 543 * 10 + 2 = 5432
+// num = 12 / 10 = 1
+
+//Round 5
+// lastDigit = 1 % 10 = 1
+// reverse = 5432 * 10 + 1 = 54321
+// num = 1 / 10 = 0.1 = 0
+
+
+
+
+// task 5
+// 1
+// 2 3
+// 4 5 6
+// 7 8 9 10
+// let sum = 1;
+// for (let i = 1; i <= 5; i++) {
+//     for (n = 1; n <= i; n++) {
+//         document.write(sum," ");
+//         sum ++;
+//     }
+//     document.write(' <br>');
+// }
+
+
+// ARRAY => an array store multiple values in a single array
+// example
+// let fruits = ['apple','mango','banana'];
+// console.log(fruits[2]); // find index value
+
+// multi diemensional array an array inside array
+// let fruits = ['apple','mango','banana',['cherry','orange']];
+// console.log(fruits[3][0]);
+
+// let fruits = ['apple','mango','banana'];
+// let t = fruits.length;
+// for(let i =0; i< t; i++){
+//    console.log(i,fruits[i]);
+// }
+
+// reverse nikalna
+// let fruits = ['apple', 'mango', 'banana'];
+// let t = fruits.length;  // 3 - 2
+// for (let i = t - 1; i >= 0; i--) {
+//     console.log(i, fruits[i]);
+// }
+
+// let v = [10, 20, 30, 40]
+// let sum = 0;
+// for (let i of v) {
+//     sum += i; // i mean v ki value
+//     console.log(i);
+// }
+// console.log(sum);
+
+
+// for (let i in v) {
+//     console.log(i,v[i]);
+// }
+
+// let c = [10, 20, 23, 55, 99, 77, 66, 44, 56, 21];
+// for(let d of c){
+//     console.log(d);
+//     if(d % 2 == 0)  {
+//      console.log('even numbers',d);     
+//     } 
+// }
+
+// let l = [10, 20, 30];
+// console.log(l);
+// // change value on 2 position
+// l[2] = 40
+// console.log(l);
+
+// let l = [10, 20, 30];
+// // push method add array values at the end and change original array also adding multiple values
+// l.push(94);
+// l.push(99,77,55);
+// // pop method delete from the last and return value
+// // l.pop()
+// // l.pop()
+// console.log(l.pop());
+// // shift delete value from the start and return the delete value
+// l.shift()
+// console.log(l.shift());
+// // unshift add values from the start or multiple values
+// l.unshift(22,33)
+// console.log(l);
+
+// splice add , remove , replace at a specified index -1 right se start + left and return karta hai delete value
+// let l = [10, 20, 30];
+// // l.splice(1,1,40,50,60);
+
+// // l.splice(-1,1,40,50,60);
+// console.log(l.splice(-1, 0, 40, 50, 60));
+
+// sort values ko sequenced dena
+// let l = [10,30,50,20,100];
+// let l = ['a','c','e','b','d'];
+// l.sort();
+// //  reverse mean order change kardena ['e', 'd', 'c', 'b', 'a']
+// l.reverse()
+// // fill mean kisi bhi element ko fill kardena
+// // (2, start index, end index 1 zada den)
+// l.fill(2,0,3)
+// console.log(l);
+
+
+// task 1
+// let l = [1,2,3,4];
+// for(let i of l){
+//     l.pop();
+//     console.log(l);   
+// }
+
+// task 2
+// let l = [1, 2, 3, 4];
+// for (let i of l) {
+//     l[3] = i
+//     console.log(l);
+//     console.log(i); 
+// }
+// round 1  l[3] = 1  [1, 2, 3, 1]
+// round 2  l[3] = 2  [1, 2, 3, 2]
+// round 1  l[3] = 3  [1, 2, 3, 3]
+// round 1  l[3] = 3  [1, 2, 3, 3]
+
+
+// slice original array ki copy bana deta hai or return krta hai copy array
+// let i =[10,20,30,40,50];
+// // let copyArray = i.slice(1,4);
+// let copyArray = i.slice(-3);
+// console.log(copyArray);
+
+// concat mean join karna two or more array and returning new array
+// let a =['a','b','c','d','u'];
+// let i =[10,20,30,40,50];
+// let c =[100,400,500];
+
+// let newArray = i.concat(a,c);
+// console.log(newArray);
+
+
+// inculdes mean find the value true if not return false
+// let a =['a','b','c','d','u'];
+// // true
+// console.log(a.includes('a'));
+// // false
+// console.log(a.includes('v'));
+
+
+// indexOf find the index of the value if not found give -1
+// let a =['a','b','c','d','u'];
+// // find
+// console.log(a.indexOf('b'));
+// // not found
+// console.log(a.indexOf('v'));
+
+
+// join means array's value convert into string or separate
+// let a =['a','b','c','d','u'];
+// // true
+// console.log(a.join('^'));
+
+
+// toString mean give , separated values
+// let a =['a','b','c','d','u'];
+// console.log(a.toString());
+
+
+// Task 1
+// let i = [1, 2, 3, 4];
+// let o = [3, 4, 8, 0];
+
+// for (let v of i) {
+//     if (o.includes(v)) {
+//         console.log(v);
+//     }
+// }
+
+// Task 2
+// let i = [1,2,3,3,4,5,6,5,7,7];
+// let finalArray =[];
+
+// for(let v of i){
+//     if(!finalArray.includes(v)){
+//         console.log(finalArray.push(v));        
+//     }
+// }
+
+// round 1 [].includes(1) => ! false = true finalArray[1];
+// round 2 [].includes(2) => ! false = true finalArray[1,2];
+// round 1 [].includes(3) => ! false = true finalArray[1,2,3];
+// round 1 [].includes(3) => ! true = false finalArray[1,2,3];
+// round 1 [].includes(4) => ! false = true finalArray[1,2,3,4];
+// round 1 [].includes(5) => ! false = true finalArray[1,2,3,4,5];
+// round 1 [].includes(6) => ! false = true finalArray[1,2,3,4,5,6];
+// round 1 [].includes(5) => ! truse = false finalArray[1,2,3,4,5,6];
+// round 1 [].includes(7) => ! false = true finalArray[1,2,3,4,5,6,7];
+// round 1 [].includes(7) => ! true = false finalArray[1,2,3,4,5,6,7];
+
+
+// Task 3
+// find greater value
+// let m = [33, 100, 23, 67];
+// let maxValue = [0];
+// for (let v of m) {
+//     if (v > maxValue) {
+//         maxValue = v
+//         console.log(maxValue);
+//     }
+// }
+// console.log(maxValue);
+
+// Round 1 v 33 > 33 false maxValue = 88
+// Round 2 v 100 > 33 true maxValue = 100
+// Round 1 v 23 > 100 false maxValue = 100
+// Round 1 v 67 > 100 false maxValue = 100
+
+// Task 4
+// let m = [33, 100, 23, 67];
+// let final = [];
+// for(let v of m){
+//     final.unshift(v)
+// }
+// console.log(final); 
+
+// let m = [33, 100, 23, 67];
+// let l = m.length  
+// let final = [];
+// console.log(m);   
+
+// for(i = l - 1; i>=0; i--){
+//     final.push(m[i])
+// } 
+// console.log(final);   
+
+
+// Function => a function is a reusable block of code designed to perform a particular task;
+
+// function definition
+// function hello(){
+//     console.log('hello');
+// }
+
+// // function call, invoke
+// hello();
+
+// it's a hosting concept 
+// hi()
+// function hi(){
+//     console.log('hello');
+// }
+
+// function greetUser(name){
+//     console.log('welcome'+name);   
+// }
+// greetUser(' rida');
+// greetUser(' Abid');
+
+// function sum(a,b){
+//     // when a num with undefined => NaN
+//     console.log(a,b);
+
+//     console.log(a+b);   
+//     console.log(a-b);   
+// }
+// sum(12);
+// sum(100,10);
+
+// default value
+// function sum(a,b=1){
+//     console.log(a+b);   
+//     console.log(a-b);   
+// }
+// sum(12); //utilize default value
+// sum(100,10); // orderide default value
+
+// interview
+// spread operator all staf in one place ... mean give answer in array
+// function sum(...allParams) {
+//     console.log(allParams);
+// }
+// sum(1, 2, 5, 8, 3)
+
+// return means give the result on the particular work just hold value but not print and after return no execute code
+// function sum(a, b) {
+//     return a + b
+// }
+// let result = sum(10, 40);
+// console.log(result);
+
+
+// Example of return
+// return price * .10;
+// function texCal(price) {
+//     //0.10
+//     console.log(price * .10);
+    
+// }
+// let productPrice = 50000;
+// let total = texCal(productPrice) + productPrice;
+// console.log(total);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
