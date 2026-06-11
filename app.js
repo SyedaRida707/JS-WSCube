@@ -838,8 +838,8 @@
 // for(let d of c){
 //     console.log(d);
 //     if(d % 2 == 0)  {
-//      console.log('even numbers',d);     
-//     } 
+//      console.log('even numbers',d);
+//     }
 // }
 
 // let l = [10, 20, 30];
@@ -886,7 +886,7 @@
 // let l = [1,2,3,4];
 // for(let i of l){
 //     l.pop();
-//     console.log(l);   
+//     console.log(l);
 // }
 
 // task 2
@@ -894,7 +894,7 @@
 // for (let i of l) {
 //     l[3] = i
 //     console.log(l);
-//     console.log(i); 
+//     console.log(i);
 // }
 // round 1  l[3] = 1  [1, 2, 3, 1]
 // round 2  l[3] = 2  [1, 2, 3, 2]
@@ -960,7 +960,7 @@
 
 // for(let v of i){
 //     if(!finalArray.includes(v)){
-//         console.log(finalArray.push(v));        
+//         console.log(finalArray.push(v));
 //     }
 // }
 
@@ -999,17 +999,17 @@
 // for(let v of m){
 //     final.unshift(v)
 // }
-// console.log(final); 
+// console.log(final);
 
 // let m = [33, 100, 23, 67];
-// let l = m.length  
+// let l = m.length
 // let final = [];
-// console.log(m);   
+// console.log(m);
 
 // for(i = l - 1; i>=0; i--){
 //     final.push(m[i])
-// } 
-// console.log(final);   
+// }
+// console.log(final);
 
 
 // Function => a function is a reusable block of code designed to perform a particular task;
@@ -1022,14 +1022,14 @@
 // // function call, invoke
 // hello();
 
-// it's a hosting concept 
+// it's a hosting concept
 // hi()
 // function hi(){
 //     console.log('hello');
 // }
 
 // function greetUser(name){
-//     console.log('welcome'+name);   
+//     console.log('welcome'+name);
 // }
 // greetUser(' rida');
 // greetUser(' Abid');
@@ -1038,16 +1038,16 @@
 //     // when a num with undefined => NaN
 //     console.log(a,b);
 
-//     console.log(a+b);   
-//     console.log(a-b);   
+//     console.log(a+b);
+//     console.log(a-b);
 // }
 // sum(12);
 // sum(100,10);
 
 // default value
 // function sum(a,b=1){
-//     console.log(a+b);   
-//     console.log(a-b);   
+//     console.log(a+b);
+//     console.log(a-b);
 // }
 // sum(12); //utilize default value
 // sum(100,10); // orderide default value
@@ -1072,11 +1072,395 @@
 // function texCal(price) {
 //     //0.10
 //     console.log(price * .10);
-    
+
 // }
 // let productPrice = 50000;
 // let total = texCal(productPrice) + productPrice;
 // console.log(total);
+
+// Anonymouse function => an anonymouse function has no name it's stored in a variable and used it directly as a callback
+
+// const showMe = function(){
+//     console.log('anonymouse function');
+// }
+// showMe();
+// showMe();
+
+// callback function => function passed to another function as a argument and executed code later
+// function showMessage(callback) {
+//     console.log('helloe everyone');
+//     callback()
+// }
+// function saybye() {
+//     console.log('byee');
+// }
+// showMessage(saybye)
+
+// function addtion(num1, num2) {
+//     return num1 + num2
+// }
+// function subtract(num1, num2) {
+//     return num2 - num1
+// }
+// function calculate(num1, num2, callback) {
+//     console.log('final calculation', callback(num1, num2));
+// }
+// calculate(10, 30, subtract)
+
+// Arrow function offer a shorter syntax than the regular function
+// let add = (num1, num2) => {
+//     return num1 + num2;
+// };
+// console.log(add(20, 40));
+
+
+// arrow function by default return if we dont add curly bracket
+// let add = (num1, num2) => num1 + num2;
+// console.log(add(20, 40));
+
+// also u have one parameter don't use round bracket
+// const square = x => x*x;
+// console.log(square(5));
+
+// const square = x => {
+//    return  x*x
+// };
+// console.log(square(5));
+
+
+// Task 1
+// let vowelsletters = 'aeiouAEIOU';
+// let findVowels = (str) => {
+//     let count = 0;
+//     for (let v of str) {
+//         if (vowelsletters.includes(v)) {
+//             count++;
+//             console.log('its vowels', v, count);
+//         }
+//     }
+//     return count
+// }
+// console.log(findVowels('welcomeneria'));
+
+
+// Task 2
+// let factorial = (x) =>{
+//     let fact =1;
+//     for(let i = 1; i<=x; i++){
+//     fact*=i;
+//     // console.log(i,fact); 
+//     }
+//     return fact
+// }
+// console.log(factorial(5));
+
+
+// task 3
+// let countwords = (str) => {
+//     let count = 0;
+//     for (let i = 1; i <= str.length; i++) {
+//         count++;
+//     }
+//     return count
+// }
+// console.log(countwords('diiuwnooowwbv'));
+
+
+
+// split() covert string into array The split() method breaks a string into parts and returns them as an array.
+
+// const fruits = "apple,banana,mango";
+// console.log(fruits.split(","));
+
+// const str = "I am learning JavaScript";
+// console.log(str.split(" "));
+
+// let countwords = (str) => {
+//     return str.split(" ").length;
+//         // console.log( str.split(" "));      
+//     }
+
+// console.log(countwords('diiuwnooowwbv hui iam helo'));
+
+
+// let countwords = (str) => {
+//     let words = 1;
+//     for (let i of str) {
+//         if (i === ' ') {
+//             console.log('space');
+//             words++;
+//         }
+//     }
+//     return words;
+// }
+// console.log(countwords('diiuwnooowwbv hui iam helo'));
+
+// OBJECTs is collection of key-values pair;
+// let user = {
+//     'userEmail': 'example.@com',
+//     userPhone: 5555,
+//     userStatus: true,
+//     userAddress: 'karachi',
+//     1: 10
+// }
+// key with  . 1 give error dont access
+// console.log(user.1);
+
+// Dot notation
+// console.log(user.userEmail);
+// console.log(user.userPhone);
+// // Square notation
+// console.log(user['userAddress']);
+// console.log(user[1]);
+
+
+// Adding Key in user  inserting and updating if the key already in user
+// user.age = 32;
+// console.log(user);
+
+//  updating
+// user.userEmail = 'hi@gmail.com';
+// console.log(user);
+// user['userAddress'] = 'islamabad';
+// console.log(user);
+
+// // delete
+// delete user.userAddress;
+// console.log(user);
+
+// let userName = 'rida';
+// let user = {
+//     'userEmail': 'example.@com',
+//     userPhone: 5555,
+//     userStatus: true,
+//     userAddress: 'karachi',
+//     1: 10,
+//     student: {
+//         one: 'SMIT',
+//         two: 'ILMA'
+//     },
+//     userName
+// }
+// console.log(user);
+
+
+// Destructuring 
+// userEmail key work as a variable now
+// let {userEmail,userAddress} = user
+// console.log(userEmail,userAddress);
+
+// Nesting Destructuring
+// let { student : { one, two } } = user
+// // console.log(student);
+// console.log(one);
+// console.log(two);
+
+
+// Renaming variable
+// let {userEmail:email} = user
+// console.log(email);
+// console.log(user);
+
+// What is rest operator
+// let {userEmail,...restKeys} = user;
+// console.log(userEmail);
+// console.log(restKeys);  //give in object
+
+
+// Array Destructuring
+// let  colors =['🟡','🔴','🔵','🟢'];
+// const [one,two,three] = colors;
+// console.log(one);
+// console.log(two);
+// console.log(three);
+
+// Skipping item
+// let  colors =['🟡','🔴','🔵','🟢'];
+// const [ , ,three] = colors;
+// console.log(three);
+
+// Rest Operator
+// let  colors =['🟡','🔴','🔵','🟢'];
+// const [a,...rest] = colors;
+// console.log(a,rest);
+
+
+// Deep copy
+// let l =[1,2,3,4];
+// let m = l;
+// console.log(l);
+// console.log(m);
+// m.push(34,56);
+// // Ater Push
+// console.log(l);
+// console.log(m);
+
+
+// let l =[1,2,3,4];
+// let m = [...l];
+// console.log(l);
+// console.log(m);
+// m.push(34,56);
+// // Ater Push
+// console.log(l);
+// console.log(m);
+
+// Task 1
+// let score = [90, 85, 88];
+// let findScore = [first, , third] = score
+// console.log(first, third);
+
+// Task 2
+// const user = {
+//     name : 'rida',
+//     age : 21,
+//     address : {
+//         city : 'karachi',
+//     }
+// }
+// let {address :{ city}} = user;
+// console.log(city);
+
+
+// Task 3
+// let a = [1, 2];
+// let b = [3, 4];
+// console.log([...a, ...b]);
+
+// a = [23,10, ...a, 30];
+// console.log(a);
+
+// Task 4
+// const [first,...second] = [10,20,30];
+// console.log(first,second);
+
+
+// map => work on array do not change original array transform each element an return array and always use callback function and callback function give value,index and give two parameter do not change length
+// let l = [1,2,3,4];
+//  function simple and arrow function
+// l.map((v,i)=>{
+//   console.log(v,i);
+// });
+// console.log(l);
+
+// when you give in variable then return array
+// let returnArray = l.map((v,i)=>{
+//   console.log(v,i);
+//   return v+5
+// })
+// returnArray = [6,7,8,9] 
+// console.log(returnArray);
+
+// If we dont give curly brackets use like this not need for return 
+// and give one parameter just take value not index
+// let l = [1,2,3,4];
+// let newArray = l.map((v) => v+2); //automatic give
+// console.log(newArray);
+
+
+// example
+// const num = [1,2,3];
+// const square = num.map(v => v*v);
+// console.log(square);
+
+// const num = [1,2,3];
+// const square = (v) => v**2; // 1x1 = 1, 2x2=4, 3x3=9
+// const squareArray = num.map(square);
+// console.log(squareArray);
+
+
+// filter create new array and works on the conditions in a callback; change length according to the coditions
+// let ages =[19,12,18,10];
+// let adults = ages.filter(age => age >= 18);
+// console.log(adults);
+
+// let ages =[19,12,18,10];
+// let adults = ages.filter((v) =>{
+//     if(v >= 18){
+//         return true
+//     }
+// });
+// console.log(adults);
+
+
+// example
+// let user = [
+//     {
+//         name : 'atruba',
+//         age : 22
+//     },
+//     {
+//         name : 'rida',
+//         age : 21
+//     },
+//     {
+//         name : 'raza',
+//         age : 20
+//     },
+//     {
+//         name : 'mutib',
+//         age : 14
+//     },
+//     {
+//         name : 'muhib',
+//         age : 12
+//     },
+// ]
+// console.log(user);
+// let fillterArray = user.filter(obj => obj.age >= 18);
+// console.log(fillterArray);
+
+
+// reduce add or combine all values in an array into one single value. not give array
+// let l = [1,2,3,4];
+// let total = l.reduce((sum,num) => sum+num,0);
+// console.log(total);
+
+// find give first match value in an array that true the condition
+// let num = [3, 7, 12, 4, 15];
+// let firstEven = num.find(v => v % 2 === 0);
+// console.log(firstEven);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
