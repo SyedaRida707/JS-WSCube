@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing words count</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    .main {
+        margin: auto;
+        width: 30rem;
+
+        & textarea {
+            width: 100%;
+            height: 300px;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="main">
+        <textarea name="" id=""></textarea>
+        <h2>length <span>0</span></h2>
+        <div class="restDev"></div>
+    </div>
+</body>
+<script>
+    let text = document.querySelector('textarea');
+    let span = document.querySelector('span');
+    let div = document.querySelector('.restDev');
+
+
+    text.addEventListener('keyup', () => {
+        div.innerText = text.value
+        span.innerText = text.value.length
+
+    })
+</script>
+
+</html>

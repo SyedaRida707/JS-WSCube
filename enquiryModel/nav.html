@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d64bc55ce9.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+
+    header {
+        box-shadow: 0 1px 4px 0px black;
+        background-color: antiquewhite;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid rgb(121, 37, 37);
+
+        & nav {
+            display: flex;
+            justify-content: space-between;
+            width: 50rem;
+            margin: 0px auto;
+            padding: 0px 20px;
+
+            & h2 {
+                color: rgb(121, 37, 37);
+            }
+
+            & a {
+                color: rgb(121, 37, 37);
+            }
+
+            & .menu {
+                display: none;
+            }
+
+            & ul {
+                display: flex;
+                gap: 1rem;
+                list-style: none;
+                align-items: center;
+            }
+
+        }
+    }
+
+    @media only screen and (min-width : 100px) and (max-width : 400px) {
+        header {
+            & nav {
+                & .menu {
+                    display: block;
+                    position: relative;
+                    right: 3px;
+                    top: 5px;
+                    cursor: pointer;
+                }
+            }
+
+
+            & ul {
+                padding-top: 10px;
+                position: fixed;
+                height: 100%;
+                width: 80%;
+                top: 0px;
+                left: -100%;
+                background-color: antiquewhite;
+                flex-direction: column;
+                transition: .4s linear;
+                border: 2px solid rgb(121, 37, 37);
+
+            }
+        }
+    }
+
+    .showmenu {
+        left: 0px;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <h2>Syeda Rida</h2>
+            <i class="fa-solid fa-bars menu"></i>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+<script>
+    let icon = document.querySelector('.menu');
+    let ul = document.querySelector('ul');
+    icon.addEventListener('click', () => {
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-rectangle-xmark');
+        ul.classList.toggle('showmenu');
+    })
+</script>
+
+</html>

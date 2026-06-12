@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: grid;
+        place-items: center;
+    }
+
+    div {
+        margin-top: -1000px;
+        width: 30rem;
+        aspect-ratio: 1;
+        box-shadow: 0px 0px 10px black;
+        text-align: center;
+        transition: all .4s ease-in;
+    }
+
+    h2 {
+        position: relative;
+
+        & span {
+            position: absolute;
+            right: 30px;
+        }
+    }
+</style>
+
+<body>
+    <button>Click</button>
+    <div class="box">
+        <h2>Hello enQuiry Model <span>&times;</span></h2>
+    </div>
+</body>
+<script>
+    let btn = document.querySelector('button');
+    let div1 = document.querySelector('.box');
+    let span = document.querySelector('h2 span');
+
+    btn.addEventListener('click', () => {
+        div1.style.marginTop = '20px';
+        span.style.color = 'red'
+        span.style.cursor = 'pointer';
+    })
+    span.addEventListener('click', () => {
+        div1.style.marginTop = '-1000px';
+    })
+</script>
+
+</html>

@@ -1148,7 +1148,7 @@
 //     let fact =1;
 //     for(let i = 1; i<=x; i++){
 //     fact*=i;
-//     // console.log(i,fact); 
+//     // console.log(i,fact);
 //     }
 //     return fact
 // }
@@ -1177,7 +1177,7 @@
 
 // let countwords = (str) => {
 //     return str.split(" ").length;
-//         // console.log( str.split(" "));      
+//         // console.log( str.split(" "));
 //     }
 
 // console.log(countwords('diiuwnooowwbv hui iam helo'));
@@ -1244,7 +1244,7 @@
 // console.log(user);
 
 
-// Destructuring 
+// Destructuring
 // userEmail key work as a variable now
 // let {userEmail,userAddress} = user
 // console.log(userEmail,userAddress);
@@ -1348,10 +1348,10 @@
 //   console.log(v,i);
 //   return v+5
 // })
-// returnArray = [6,7,8,9] 
+// returnArray = [6,7,8,9]
 // console.log(returnArray);
 
-// If we dont give curly brackets use like this not need for return 
+// If we dont give curly brackets use like this not need for return
 // and give one parameter just take value not index
 // let l = [1,2,3,4];
 // let newArray = l.map((v) => v+2); //automatic give
@@ -1420,6 +1420,238 @@
 // let num = [3, 7, 12, 4, 15];
 // let firstEven = num.find(v => v % 2 === 0);
 // console.log(firstEven);
+
+
+// forEach() => array ke element ko print karta hai value or index bata ta hai koi array return nhi karta koi calculation nhi krta koi single value nhi deta
+//  let l= [3, 7, 12, 4, 15];
+// let firstEven = l.forEach(v => console.log(v));
+// console.log(firstEven);
+
+
+// let user = [
+//     {
+//         name : 'atruba',
+//         age : 22
+//     },
+//     {
+//         name : 'rida',
+//         age : 21
+//     },
+//     {
+//         name : 'raza',
+//         age : 20
+//     },
+//     {
+//         name : 'mutib',
+//         age : 14
+//     },
+//     {
+//         name : 'muhib',
+//         age : 12
+//     },
+// ]
+// user.forEach((value,index) =>{
+//     console.log(value,index);
+//     console.log(user[0].age);
+// });
+
+// Task 1
+// const num = [1,2,3,4];
+// const sum = num.map(n => n+n);
+// console.log(sum);
+
+// Task 2
+// const num = [2, 4, 6, 8, 10, 15];
+// const filterEven = num.filter(n => n % 2 === 0);
+// console.log(filterEven);
+
+// Task 3
+// let students = [
+//     { name: 'rida', marks : 70 },
+//     { name: 'raza', marks : 30 },
+//     { name: 'mutib', marks : 25 }
+// ]
+// let findFirst = students.find((v) => v.marks < 35);
+// console.log(findFirst);
+
+
+// =========DOM=========
+// DOM is like a tree structure through DOM we target any element
+// console.log(window); // windo in built object in javascript
+// console.log(document);  // window document ki key hai
+
+
+// let heading = document.getElementById('demo');
+// console.log(heading);
+
+// // Change Content of the tag whose have some content inside the tag
+// console.log(heading.innerHTML); // give content and tag => welcome <ul>hi</ul>
+// console.log(heading.innerText); // just give text => welcome hi
+
+
+// querySelector take,class,id,tag using # .
+// let input = document.querySelector('#username');  // by ID
+// console.log(input.placeholder);
+// console.log(input.type);
+// input.placeholder = 'Enter your name 😉';   // updated placeholder value
+// console.log(input.placeholder)
+// // input.type = 'password';                    // updated type
+// // console.log(input.type);
+// input.value = 'Rida Abid';                  // change value
+
+
+
+// let para = document.querySelector('.para');       // by class
+// let p = document.querySelector('p');              // by tag name P // if we have two tag with same same target only one
+// console.log(input);
+// console.log(para);
+// console.log(p);
+
+
+
+// querySelectorAll select all matching elements and returns a nodelist, Array work on (Tag,Class)
+// let li = document.querySelectorAll('li');
+// console.log(li);
+// console.log(li[0].innerHTML);
+// console.log(li[1].innerHTML);
+// console.log(li[2].innerHTML);
+// console.log(li[3].innerHTML);
+
+// let li = document.querySelectorAll('li');
+// li.forEach((items, index) => {items.innerText = ` li ${index + 1}` 
+//     console.log(items.innerText);
+// });
+
+
+// Event means button pr event laga kr function chalana jis se koi kam perform hon
+// function showAlert(){
+//     alert('helloe events')
+// }
+
+
+
+
+// let password = document.querySelector('#password');
+// let btn = document.querySelector('#btn');
+// function show(){
+//     if(btn.innerHTML == 'show'){
+//         password.type = 'text';
+//         btn.innerHTML = 'hide'
+//     }else{
+//         password.type = 'password';
+//         btn.innerHTML = 'show';
+//     }
+// }
+
+
+// addEventListener => When this event happens, run this code.
+// element → the HTML element you want to watch
+// event → what should happen (click, mouseover, keydown, etc.)
+// function → code that runs when the event occurs
+
+// let btn = document.querySelector('#btn');
+// btn.addEventListener('click',() => {
+//     alert('hello');
+// });
+
+// btn.addEventListener('click', function(){
+//     alert('hello devs');
+// });
+
+
+
+// let password = document.querySelector('#password');
+// let btn = document.querySelector('#btn');
+// function show(){
+//     if(btn.innerHTML == 'show'){
+//         password.type = 'text';
+//         btn.innerHTML = 'hide'
+//     }else{
+//         password.type = 'password';
+//         btn.innerHTML = 'show';
+//     }
+// }
+// btn.addEventListener('click',show);
+
+
+
+// let btn = document.querySelector('#btn');
+// btn.addEventListener('click',()=>{
+//      if(btn.innerHTML == 'show'){
+//         password.type = 'text';
+//         btn.innerHTML = 'hide'
+//     }else{
+//         password.type = 'password';
+//         btn.innerHTML = 'show';
+//     }
+// })
+
+
+
+
+
+// Example swap h1 and p content
+// let btn = document.querySelector('button');
+// let p = document.querySelector('p');
+// let h1 = document.querySelector('h1');
+// console.log(btn, p, h1);
+
+// btn.addEventListener('click', () => {
+//     pData = p.innerText;
+//     h1Data = h1.innerText;
+
+//     p.innerText = h1Data;
+//     h1.innerText = pData
+
+// })
+
+
+
+
+// Applying css using js
+//  let btn = document.querySelector('button');
+// let p = document.querySelector('p');
+
+// btn.addEventListener('click',()=>{
+//    if(p.style.color == 'black'){
+//      p.style.color = 'blue';
+//     p.style.fontSize = '20px'
+//    }
+//    else{
+//     p.style.color = 'black';
+//     p.style.fontSize = '10px'
+//    }
+// })
+
+// Create enquiryModel
+
+// Classes Classlist add,delete,toggle 
+// let btnadd = document.querySelector('#add');
+// let btndelete = document.querySelector('#delete');
+// let btnToggle = document.querySelector('#toggle');
+// let p = document.querySelector('p');
+// btnadd.addEventListener('click', () => {
+//     p.classList.add('active');
+// });
+
+// btndelete.addEventListener('click', () => {
+//     p.classList.remove('active');
+// });
+
+// btnToggle.addEventListener('click', () => {
+//     p.classList.toggle('active');
+// });
+
+// math method
+// console.log(Math.random());
+// console.log(Math.floor(5.3));
+// console.log(Math.floor(-5.4));
+// console.log(Math.ceil(6.7));
+console.log(Math.ceil(-6.7));
+
+
+
+
 
 
 
