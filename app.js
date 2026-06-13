@@ -1647,7 +1647,39 @@
 // console.log(Math.floor(5.3));
 // console.log(Math.floor(-5.4));
 // console.log(Math.ceil(6.7));
-console.log(Math.ceil(-6.7));
+// console.log(Math.ceil(-6.7));
+// console.log(Math.round(5.2));
+// console.log(Math.round(-6.7));
+
+
+// Event Object => the browser send an object to the event handler with information about what happen
+
+// let div = document.querySelector('div');
+// div.addEventListener('click',(e)=>{
+//      if(e.target.tagName == 'BUTTON'){
+//     alert('hi')
+
+//      }
+
+//     // console.log(e.type);
+//     // console.log(e.target);
+//     // console.log(e.currentTarget);
+//     // console.log(e.clientX);
+//     // console.log(e.clientY);
+    
+// })
+
+// event delegation
+
+// event bubling and stoppropagaion() means prevent the event from bubbling futher up the DOM tree;
+// document.querySelector('div').addEventListener('click',()=>{
+//     console.log('div click');
+// });
+
+// document.querySelector('button').addEventListener('click',(e)=>{
+//     console.log('button click');
+//     e.stopPropagation();
+// });
 
 
 
