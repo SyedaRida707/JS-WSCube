@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main"><h2>Hello DOM</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, qui!</p>
+        <button>Click me</button>
+        <p>next sibling</p>
+    </div>
+    <div class="main"></div>
+</body>
+<script>
+    let div = document.querySelector('.main');
+    // // console.log(div.children);
+    // for(v of div.children){
+    //     console.log(v);   
+    // }
+
+    // Array.from(div.children).forEach((items)=>{
+    //     console.log(items);
+        
+    // });
+
+    // element.ParentElement(); element.closest('.main');
+    let btn = document.querySelector('button');
+    // console.log(btn.parentElement);
+    // console.log(btn.closest('.main'));
+    // console.log(btn.nextElementSibling);
+    // console.log(btn.previousElementSibling);
+    
+    // Nodes
+    console.log(div.childNodes);
+    console.log(div.firstChild);
+    console.log(div.lastChild);
+    console.log(div.parentNode);
+    console.log(btn.previousSibling);
+    console.log(btn.nextSibling);
+
+    
+    
+</script>
+</html>

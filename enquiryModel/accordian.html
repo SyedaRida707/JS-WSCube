@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            /* width: 100%;
+            margin: 0 auto; */
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        .main {
+            width: 40rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: auto;
+
+            & .items {
+                padding: 1rem;
+                box-shadow: 0px 0px 5px 0px black;
+                border-radius: 1rem;
+                border: .1rem solid gray;
+
+                & h3 {
+                    background-color: rgb(0, 229, 255);
+                    font-size: 1rem;
+                    position: relative;
+
+                    & span {
+                        position: absolute;
+                        right: 15px;
+                    }
+                }
+
+                & .ans p {
+                    padding-top: .2rem;
+                    font-size: .8rem;
+                }
+            }
+        }
+
+        .ans {
+            padding: 3px;
+            display: none;
+        }
+
+        .showAns {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>FAQs About web development services</h2>
+    <div class="main">
+        <div class="items">
+            <h3>1 Building modern and responsive websites <span>➕</span></h3>
+            <div class="ans">
+                <p>1 I create clean, fast, and user-friendly websites using HTML, CSS, JavaScript, and modern web
+                    technologies. My focus is on responsive design and smooth user experiences.</p>
+            </div>
+        </div>
+        <div class="items">
+            <h3>2 Building modern and responsive websites <span>➕</span></h3>
+            <div class="ans">
+                <p>2 I create clean, fast, and user-friendly websites using HTML, CSS, JavaScript, and modern web
+                    technologies. My focus is on responsive design and smooth user experiences.</p>
+            </div>
+        </div>
+        <div class="items">
+            <h3>3 Building modern and responsive websites <span>➕</span></h3>
+            <div class="ans">
+                <p>2 I create clean, fast, and user-friendly websites using HTML, CSS, JavaScript, and modern web
+                    technologies. My focus is on responsive design and smooth user experiences.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let allQ = document.querySelectorAll('.items h3'); //NodeList
+    // console.log(allQ);
+
+    allQ.forEach((Q, I) => {
+        // console.log(Q);
+        Q.addEventListener('click', () => {
+            // console.log(Q.innerHTML);
+            // console.log(Q.nextElementSibling);
+            allQ.forEach((l, i) => {
+
+                if (i !== I) {
+                    l.lastElementChild.innerHTML = '➕'
+                    l.nextElementSibling.classList.remove('showAns')
+                    console.log(l, i, I);
+                }
+            });
+            // Click Question
+            if (Q.lastElementChild.innerHTML == '➕') {
+                Q.lastElementChild.innerHTML = '➖';
+            } else {
+                Q.lastElementChild.innerHTML = '➕';
+            }
+            Q.nextElementSibling.classList.toggle('showAns')
+        });
+
+    });
+</script>
+
+</html>
